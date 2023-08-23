@@ -1,0 +1,7 @@
+<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <div th:replace="~{components/NavBar/logo.html :: logo}"></div>
+        <div th:replace="~{components/NavBar/toggler.html :: toggler}"></div>
+        <div th:replace="~{components/NavBar/menu.html :: menu}"></div>
+    </div>
+</nav>

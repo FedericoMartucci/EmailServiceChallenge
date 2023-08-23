@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Service</title>
+    <!-- Enlace a los archivos de Bootstrap -->
+    <div th:replace="~{components/Animations/bootstrap.html :: bootstraplink}"></div>
+</head>
+<body>
+    <!-- Navigation -->
+    <div th:replace="~{components/NavBar/navbaradmin.html :: navbaradmin}"></div>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Sidebar with folders -->
+            <div th:replace="~{components/Lists/folders.html :: folders}"></div>
+            <div class="col-md-9">
+                <!-- Email list -->
+                <div th:replace="~{components/Lists/emails.html :: emails}"></div>
+                <!-- More emails... -->
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <div th:replace="~{components/Animations/bootstrap.html :: bootstrapcontext}"></div>
+</body>
+</html>

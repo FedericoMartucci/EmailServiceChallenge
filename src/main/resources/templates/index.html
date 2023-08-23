@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Email Service</title>
+        <div th:replace="~{components/Animations/bootstrap.html :: bootstraplink}"></div>
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <div th:replace="~{components/NavBar/navbar.html :: navbar}"></div>
+        <!-- Header-->
+        <div th:replace="~{components/Header/header.html :: header}"></div>
+        <!-- Page Content -->
+        <div th:replace="~{components/Forms/login.html :: loginForm}"></div>
+        <!-- Footer -->
+        <div th:replace="~{components/Footer/footer.html :: footer}"></div>
+        <!-- Bootstrap core JavaScript -->
+        <div th:replace="~{components/Animations/bootstrap.html :: bootstrapcontext}"></div>
+    </body>
+</html>

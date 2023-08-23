@@ -1,0 +1,33 @@
+<div th:fragment="loginForm" class="container mt-5">
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h2>Login</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form th:action="@{/login}" method="post">
+        <div class="form-group">
+            <label for="username">Email address</label>
+            <input type="email" class="form-control" id="username" name="username" aria-describedby="emailHelp"
+                placeholder="Enter email" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required
+                autocomplete="off">
+            <div th:if="${param.error}"><small id="loginHelp" class="form-text text-danger">Invalid email or
+                    password.</small></div>
+            <div th:if="${param.logout}"><small id="logoutHelp" class="text-success">You have been logged out.</small>
+            </div>
+        </div>
+        <div>
+            <a th:href="@{/auth/register}" class="card-link">If you don't have an account yet, you can sign in here.</a>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
