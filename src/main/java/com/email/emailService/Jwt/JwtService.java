@@ -21,7 +21,7 @@ public class JwtService {
 	private static final String SECRET_KEY = "586E3272357538782F413F4428472B4B6250655368566B597033733676397924";
 
 	public String getToken(UserDetails user) {
-		return getToken(new HashMap<>(), user);
+        return getToken(new HashMap<>(), user);
 	}
 
 	private String getToken(Map<String, Object> extraClaims, UserDetails user) {
@@ -62,7 +62,7 @@ public class JwtService {
 		return getClaim(token, Claims::getExpiration);
 	}
 	
-	private boolean isTokenExpired(String token){
+	public boolean isTokenExpired(String token){
 		return getExpiration(token).before(new Date());
 	}
 }

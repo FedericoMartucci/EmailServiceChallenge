@@ -28,7 +28,7 @@ public class StatsService {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connection = DriverManager.getConnection(url, user, key);
-			PreparedStatement preparedStatement = connection.prepareStatement("SELECT from_email, COUNT(*) 'Emails Sent' FROM email WHERE SUBSTRING(date_of_email, 1, 2) = '"+ String.valueOf(datetime.getDayOfMonth()) +"' GROUP BY from_email;");
+			PreparedStatement preparedStatement = connection.prepareStatement("SELECT from_email, COUNT(*) 'Emails Sent' FROM email WHERE SUBSTRING(date_of_email, 1, "+ String.valueOf(datetime.getDayOfMonth()).length() +") = '"+ String.valueOf(datetime.getDayOfMonth()) +"' GROUP BY from_email;");
 			ResultSet resultSet = preparedStatement.executeQuery();
 			while(resultSet.next()) {
 				String username = resultSet.getString(1);

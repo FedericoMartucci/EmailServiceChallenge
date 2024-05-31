@@ -17,7 +17,6 @@ public class EmailRequest {
 	private String toEmail;
 	private String subject;
 	private String text;
-	private String dateOfEmail;
 	
 	public String getDateOfEmail() {
 		LocalDateTime datetime = LocalDateTime.now();
